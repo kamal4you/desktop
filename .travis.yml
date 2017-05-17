@@ -5,11 +5,13 @@ notifications:
 
 os:
   - osx
+  - linux
 
 branches:
   only:
     - master
     - /^__release-.*/
+    - linux
 
 language: node_js
 node_js:
