@@ -68,6 +68,10 @@ function getUserDataPath () {
   } else if (process.platform === 'darwin') {
     const home = os.homedir()
     return path.join(home, 'Library', 'Application Support', getProductName())
+  } else if (process.platform === 'linux') {
+    // TODO - HACK Hardcoded path to test it on Travis
+    const proj_path = __dirname.replace(/script/g, 'dist')
+    return path.join(proj_path, getProductName() + '-dev-linux-x64');
   } else {
     console.error(`I dunno how to review for ${process.platform} :(`)
     process.exit(1)
