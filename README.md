@@ -6,6 +6,24 @@ GitHub Desktop is an open source [Electron](https://electron.atom.io)-based
 GitHub app. It is written in [TypeScript](http://www.typescriptlang.org) and
 uses [React](https://facebook.github.io/react/).
 
+### Linux port 🐧
+
+This is a work in progress port to Linux. My current setup:
+```
+💩👻~ $ node --version
+v7.10.0
+💩👻~ $ npm --version
+4.2.0
+💩👻~ $ python --version
+Python 2.7.13
+💩👻~ $ cat /etc/issue
+Debian GNU/Linux 9
+```
+
+I haven't managed to start the app with `npm start` yet. But `npm install` and `npm run build:dev` work fine, and you can start the app with `node script/start`. There's also a small hack on script/run.js which adds the '-dev' string to the binary's path. I assume this is necessary due to my lack of knowledge of the whole Node/Electron setup, and may probably be fixed.
+
+![GitHub Desktop on Linux](https://cloud.githubusercontent.com/assets/689327/26164874/6c2b8920-3b04-11e7-8d4e-f1db027cb4a2.jpg)
+
 ![GitHub Desktop screenshot - Windows](https://cloud.githubusercontent.com/assets/359239/26094502/a1f56d02-3a5d-11e7-8799-23c7ba5e5106.png)
 
 ## Where can I get it?

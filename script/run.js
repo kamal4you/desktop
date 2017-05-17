@@ -11,6 +11,8 @@ const productName = distInfo.getProductName()
 let binaryPath = ''
 if (process.platform === 'darwin') {
   binaryPath = path.join(distPath, `${productName}.app`, 'Contents', 'MacOS', `${productName}`)
+} else if (process.platform === 'linux') {
+  binaryPath = path.join(distPath.replace(/linux/g, 'dev-linux'), `${productName}` + '-dev')
 } else if (process.platform === 'win32') {
   binaryPath = path.join(distPath, `${productName}.exe`)
 } else {
